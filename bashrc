@@ -113,21 +113,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+### sweet git stuff in the prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
-
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \[\033[00m\] \n$> '
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-alias railswpcs="cd /home/charles/Projects/Whatevery; rails server -b 192.168.1.125"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### git aliases, cause typing is hard
 alias gst="git status"
 alias gc="git commit -am"
+
+### aliases for sshing into machines I use a lot
 alias tret="ssh sysadmin@192.168.99.118"
 alias dev="ssh charles@192.168.99.125"
 alias ent="ssh charles@192.168.99.101"
+
+### nano is for newbs
 export EDITOR=vim
 
